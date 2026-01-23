@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""
+Module add_integer
+"""
+
+
 def add_integer(a, b=98):
+    """
+    Adds two integers
+    """
+
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
 
