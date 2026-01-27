@@ -11,6 +11,7 @@ class Square:
     def __init__(self, size=0):
         """
         Docstring for __init__
+        Size of square
 
         :param self: reference to the current instance
         :param size: size(private)
@@ -25,6 +26,7 @@ class Square:
     def area(self):
         """
         Docstring for area
+        Area of square
 
         :param self: reference to the current instance
         """
