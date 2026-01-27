@@ -10,10 +10,9 @@ class Square:
     """
     def __init__(self, size=0):
         """
-        Function that define a size
         Docstring for __init__
 
-        :param self: refere to function
+        :param self: reference to the current instance
         :param size: size(private)
         """
         if type(size) is not int:
@@ -22,3 +21,11 @@ class Square:
             raise ValueError("size must be >= 0")
 
         self.__size = size
+
+    def area(self):
+        """
+        Docstring for area
+
+        :param self: reference to the current instance
+        """
+        return self.__size * self.__size
