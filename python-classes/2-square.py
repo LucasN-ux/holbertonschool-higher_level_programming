@@ -11,14 +11,13 @@ class Square:
     def __init__(self, size=0):
         """
         Function that define a size
-        Docstring for __init__
 
         :param self: refere to function
         :param size: size(private)
         """
-        if isinstance is not (size, int) is False:
+        if not isinstance(size, int):
             raise TypeError("syze must be an integer")
-        if int(size) < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
 
         self.__size = size
