@@ -57,10 +57,11 @@ class Square:
         line = 0
         if self.__size == 0:
             print()
-        if self.__size > 0:
-            for i in range(self.__size ** 2):
-                line += 1
-                print("#", end="")
-                if line == self.__size:
-                    print()
-                    line = 0
+            return
+
+        for i in range(self.__size ** 2):
+            line += 1
+            print("#", end="")
+            if line == self.__size:
+                print()
+                line = 0
