@@ -58,7 +58,7 @@ class Square:
         if self.__size == 0:
             print()
             return
-
+ 
         for i in range(self.__size ** 2):
             line += 1
             print("#", end="")
