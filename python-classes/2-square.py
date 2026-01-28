@@ -16,7 +16,7 @@ class Square:
         :param size: size(private)
         """
         if not isinstance(size, int):
-            raise TypeError("syze must be an integer")
+            raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
 
