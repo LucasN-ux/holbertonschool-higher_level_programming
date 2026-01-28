@@ -34,46 +34,46 @@ class Square:
     @property
     def size(self):
         """
-        Method who return the position of private size
+        Method who return the value of private size
         """
         return self.__size
 
     @property
     def position(self):
         """
-        This method retrives the position of the suqare
+        This method retrives the value of the suqare
 
         """
         return self.__position
 
     @size.setter
-    def size(self, position):
+    def size(self, value):
         """
-        Setter to the user change the position of size
+        Setter to the user change the value of size
 
-        :param position: size of square input by user
+        :param value: size of square input by user
         """
-        if not isinstance(position, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if position < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = position
+        self.__size = value
 
     @position.setter
-    def position(self, position):
+    def position(self, value):
         """
         Set the position of print square
 
-        :param position: position input by user
+        :param value: value input by user
         """
-        if (not isinstance(position, tuple) or
-                len(position) != 2 or
-                not isinstance(position[0], int) or
-                not isinstance(position[1], int) or
-                position[0] < 0 or
-                position[1] < 0):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not isinstance(value[0], int) or
+                not isinstance(value[1], int) or
+                value[0] < 0 or
+                value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = position
+        self.__position = value
 
     def area(self):
         """
