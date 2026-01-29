@@ -15,8 +15,16 @@ class Rectangle:
         :param width: Width of rectangle
         :param height: Height of rectangle
         """
-        self.width = width
-        self.height = height
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -78,11 +86,12 @@ class Rectangle:
         """
         Print a rectangle
         """
-        if self.__width == 0 or self.height == 0:
-            return ""
-
-        my_str = []
+        my_str = ""
+        if self.__width == 0 or self.__height == 0:
+            return my_str
 
         for _ in range(self.__height):
-            my_str.append(self.__width * "#")
-        return "\n".join(my_str)
+            my_str += self.__width * "#"
+            if _ != self.__height - 1:
+                my_str += "\n"      
+        return my_str
