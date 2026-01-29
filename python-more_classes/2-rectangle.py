@@ -79,5 +79,5 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             perim = 0
         else:
-            permi = 2 * (self.__width  + self.__height)
-        return perim
+            perim = 2 * (self.__width + self.__height)
+        return (perim)
