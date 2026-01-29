@@ -15,9 +15,11 @@ class Rectangle:
         :param width: Width of rectangle
         :param height: Height of rectangle
         """
-        if not isinstance(width, int) or not isinstance(height, int):
+        if (not isinstance(width, int) or
+                not isinstance(height, int)):
             raise TypeError("width must be an integer")
-        if width < 0 or height < 0:
+        if (width < 0 or
+                height < 0):
             raise ValueError("width must be >= 0")
         self.__width = width
         self.__height = height
