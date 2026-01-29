@@ -76,4 +76,4 @@ class Rectangle:
         """
         Return the rectangle perimete
         """
-        return (self.__width * 2) + (self.__height * 2)
+        return self.__width * 2 + self.__height * 2
