@@ -79,10 +79,10 @@ class Rectangle:
         Print a rectangle
         """
         if self.__width == 0 or self.height == 0:
-            return my_str
+            return ""
 
-        my_str = ""
+        my_str = []
 
         for _ in range(self.__height):
-            my_str += self.__width * "#" + "\n"     
-        return my_str[:-1]
+            my_str.append(self.__width * "#")
+        return "\n".join(my_str)
