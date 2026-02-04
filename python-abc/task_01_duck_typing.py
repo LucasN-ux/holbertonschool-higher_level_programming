@@ -23,7 +23,7 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Define a radius of the circle"""
-        self.__radius = radius
+        self.__radius = abs(radius)
 
     def area(self):
         """Area of the shape"""
