@@ -5,8 +5,6 @@ from abc import ABC, abstractmethod
 
 class Animal(ABC):
     """Abstract class animal"""
-    def __init__(self):
-        pass
 
     @abstractmethod
     def sound(self):
