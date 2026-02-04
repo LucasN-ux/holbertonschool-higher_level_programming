@@ -23,15 +23,19 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Define a radius of the circle"""
-        self.radius = radius
+        self.__radius = radius
 
     def area(self):
         """Area of the shape"""
-        return math.pi * (self.radius ** 2)
+        if radius <= 0:
+            raise ValueError("radius must be greater than 0")
+        return math.pi * (self.__radius ** 2)
 
     def perimeter(self):
         """Perimeter of the shape"""
-        return 2 * math.pi * self.radius
+        if radius <= 0:
+            raise ValueError("radius must be greater than 0")
+        return 2 * math.pi * self.__radius
 
 
 class Rectangle(Shape):
@@ -39,16 +43,24 @@ class Rectangle(Shape):
 
     def __init__(self, width, height):
         """Define a width and height of the rectangle"""
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """Area of the rectangle"""
-        return self.width * self.height
+        if width <= 0:
+            raise ValueError("width must be greater than 0")
+        if height <= 0:
+            raise ValueError("height must be greater than 0")
+        return self.__width * self.__height
 
     def perimeter(self):
         """Perimeter of the rectangle"""
-        return 2 * (self.width + self.height)
+        if width <= 0:
+            raise ValueError("width must be greater than 0")
+        if height <= 0:
+            raise ValueError("height must be greater than 0")
+        return 2 * (self.__width + self.__height)
 
 
 def shape_info(arg):
