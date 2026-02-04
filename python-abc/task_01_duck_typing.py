@@ -27,14 +27,10 @@ class Circle(Shape):
 
     def area(self):
         """Area of the shape"""
-        if radius <= 0:
-            raise ValueError("radius must be greater than 0")
         return math.pi * (self.__radius ** 2)
 
     def perimeter(self):
         """Perimeter of the shape"""
-        if radius <= 0:
-            raise ValueError("radius must be greater than 0")
         return 2 * math.pi * self.__radius
 
 
@@ -48,18 +44,10 @@ class Rectangle(Shape):
 
     def area(self):
         """Area of the rectangle"""
-        if width <= 0:
-            raise ValueError("width must be greater than 0")
-        if height <= 0:
-            raise ValueError("height must be greater than 0")
         return self.__width * self.__height
 
     def perimeter(self):
         """Perimeter of the rectangle"""
-        if width <= 0:
-            raise ValueError("width must be greater than 0")
-        if height <= 0:
-            raise ValueError("height must be greater than 0")
         return 2 * (self.__width + self.__height)
 
 
