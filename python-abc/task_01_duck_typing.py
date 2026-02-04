@@ -14,7 +14,7 @@ class Shape(ABC):
 
     @abstractmethod
     def perimeter(self):
-        """Permimeter of the shape"""
+        """Perimeter of the shape"""
         pass
 
 
@@ -30,7 +30,7 @@ class Circle(Shape):
         return math.pi * (self.__radius ** 2)
 
     def perimeter(self):
-        """Permimeter of the shape"""
+        """Perimeter of the shape"""
         return 2 * math.pi * self.__radius
 
 
@@ -47,7 +47,7 @@ class Rectangle(Shape):
         return self.__width * self.__height
 
     def perimeter(self):
-        """Permimeter of the rectangle"""
+        """Perimeter of the rectangle"""
         return 2 * (self.__width + self.__height)
 
 
