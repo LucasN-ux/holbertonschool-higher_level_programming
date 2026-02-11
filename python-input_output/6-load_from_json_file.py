@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Script that creates an object from a JSON file"""
 import json
 
 

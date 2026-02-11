@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Script that returns a python object representing JSON format"""
 import json
 
 

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Script that saves a object in a file in JSON format"""
 import json
 
 
