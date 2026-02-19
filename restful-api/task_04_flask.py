@@ -31,7 +31,7 @@ def add_user():
     if not request.is_json:
         return jsonify({"error":"Invalid JSON"}), 400
 
-    data = request.is_json
+    data = request.get_json
 
     username = data.get("username")
 
