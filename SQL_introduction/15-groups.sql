@@ -1,3 +1,4 @@
+-- To list all the scores in a MySQL table grouped by score, you can use the following command:
 SELECT SCORE, COUNT(*) AS number
 FROM second_table
 GROUP BY score

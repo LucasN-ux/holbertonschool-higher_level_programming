@@ -1,3 +1,4 @@
+-- To create a new table in MySQL, you can use the following command:
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
