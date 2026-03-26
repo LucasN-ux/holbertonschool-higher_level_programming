@@ -20,7 +20,6 @@ def items():
         data = f.read()
         if not data:
             items = []
-            print("No items found")
         else:
             items = eval(data)['items']
     return render_template('items.html', items=items)
