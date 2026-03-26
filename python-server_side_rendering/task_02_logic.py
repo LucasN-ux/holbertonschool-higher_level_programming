@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, json
 
 app = Flask(__name__)
 
@@ -17,12 +17,8 @@ def contact():
 @app.route('/items')
 def items():
     with open('items.json') as f:
-        data = f.read()
-        if not data:
-            items = []
-        else:
-            items = eval(data)['items']
-    return render_template('items.html', items=items)
+        data = json.load(f)
+    return render_template('items.html', items=data.get('items', []))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
