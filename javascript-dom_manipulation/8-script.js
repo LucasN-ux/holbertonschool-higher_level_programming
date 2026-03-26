@@ -7,7 +7,8 @@ async function getdata() {
         }
 
         const result = await response.json();
-        document.querySelector('#hello').textContent = result.hello;
+        const helloElement = document.querySelector('#hello');
+        helloElement.textContent = result.hello;
     } catch (error) {
         console.error('Error fetching data:', error);
     }

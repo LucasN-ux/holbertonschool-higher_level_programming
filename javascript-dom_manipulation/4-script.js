@@ -1,5 +1,7 @@
-document.querySelector('#add_item').addEventListener('click', function () {
+const addItem = document.querySelector('#add_item');
+addItem.addEventListener('click', function () {
     const newLi = document.createElement('li');
     newLi.textContent = 'Item';
-    document.querySelector('ul.my_list').appendChild(newLi);
+    const myList = document.querySelector('ul.my_list');
+    myList.appendChild(newLi);
 });
