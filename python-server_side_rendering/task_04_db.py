@@ -63,7 +63,7 @@ def products():
     source = request.args.get('source')
     product_id = request.args.get('id')
 
-    if source not in ['json', 'csv', 'sqlite']:
+    if source not in ['json', 'csv', 'sql']:
         return render_template('product_display.html', error="Wrong source")
 
     if source == 'json':
@@ -75,7 +75,9 @@ def products():
         if isinstance(data, dict):
             data = data.get('products', [])
     else:
-        data = read_sqlite_db()
+        data = read_sqlite_db('products.db')
+        if isinstance(data, dict):
+            data = data.get('products', [])
 
     if product_id:
         try:
@@ -90,11 +92,12 @@ def products():
 
     return render_template('product_display.html', products=data)
 
-def read_sqlite_db():
+
+def read_sqlite_db(filename):
     products = []
 
     try:
-        conn = sqlite3.connect('products.db')
+        conn = sqlite3.connect(filename)
         cursor = conn.cursor()
 
         cursor.execute("SELECT id, name, category, price FROM Products")
@@ -112,6 +115,7 @@ def read_sqlite_db():
 
     except Exception:
         return []
+    return products
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
