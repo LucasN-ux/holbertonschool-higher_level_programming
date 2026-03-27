@@ -67,8 +67,12 @@ def products():
 
     if source == 'json':
         data = read_json_file('products.json')
+        if isinstance(data, dict):
+            data = data.get('products', [])
     else:
         data = read_csv_file('products.csv')
+        if isinstance(data, dict):
+            data = data.get('products', [])
 
     if product_id:
         try:
